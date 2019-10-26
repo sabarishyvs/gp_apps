@@ -1,0 +1,28 @@
+
+<!-- v3
+<div class="card card-block"
+     *ngFor="let joke of jokes">
+  <h4 class="card-title">{{joke.setup}}</h4>
+  <p class="card-text"
+  [hidden]="joke.hide">{{joke.punchline}}</p>
+-->
+
+  <!-- v1  a class="btn btn-primary"
+  (click)="joke.hide = !joke.hide">Tell Me
+  </a-->
+
+  <!-- v2  a class="btn btn-primary"
+  (click)="toggle(joke)">Tell Me
+  </a-->
+
+<!-- v3
+  <a class="btn btn-warning" (click)="joke.toggle()">Tell Me</a> 
+</div>
+-->
+<app-event-form  (eventCreated)="addEvent($event)"></app-event-form>
+ <app-event *ngFor="let j of events" [event]="j"></app-event> 
+
+
+<!--
+<joke *ngFor="let j of jokes"></joke>
+-->
